@@ -20,6 +20,7 @@ class KludgeGradleSubplugin : KotlinGradleSubplugin<AbstractCompile> {
         androidProjectHandler: Any?,
         kotlinCompilation: KotlinCompilation<KotlinCommonOptions>?
     ): List<SubpluginOption> {
+        println("Applying subplugin")
         val extension = project.extensions.findByType(KludgeGradleExtension::class.java) ?:
                 KludgeGradleExtension()
         return listOf(SubpluginOption("onByDefault", extension.optional.onByDefault.toString()))

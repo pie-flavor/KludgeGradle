@@ -7,6 +7,7 @@ import org.gradle.api.Project
 class KludgeGradlePlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
+        println("Applying plugin")
         target.extensions.create("kludge", KludgeGradleExtension::class.java)
     }
 
