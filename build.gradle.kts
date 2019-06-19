@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm") version "1.3.31"
     kotlin("kapt") version "1.3.31"
     `java-gradle-plugin`
+    maven
 }
 
 group = "flavor.pie"
