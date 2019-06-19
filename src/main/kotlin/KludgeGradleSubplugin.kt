@@ -28,7 +28,7 @@ class KludgeGradleSubplugin : KotlinGradleSubplugin<AbstractCompile> {
 
     override fun getCompilerPluginId(): String = "kludge"
 
-    override fun getPluginArtifact(): SubpluginArtifact = SubpluginArtifact("com.github.pie-flavor", "KludgeCompiler", "f5ce6a2")
+    override fun getPluginArtifact(): SubpluginArtifact = SubpluginArtifact("com.github.pie-flavor", "KludgeCompiler", "9b7af37")
 
     override fun isApplicable(project: Project, task: AbstractCompile): Boolean =
             project.plugins.hasPlugin(KludgeGradlePlugin::class.java)
