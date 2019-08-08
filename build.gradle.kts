@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm") version "1.3.31"
     kotlin("kapt") version "1.3.31"
     `java-gradle-plugin`
+    id("com.gradle.plugin-publish") version "0.10.0"
     maven
 }
 
@@ -18,6 +19,8 @@ gradlePlugin {
     plugins {
         create("kludge") {
             id = "flavor.pie.kludge"
+            displayName = "Kludge Compiler Gradle Plugin"
+            description = "A Gradle plugin to load the Kludge compiler plugin (for additional functionality for the Kludge library)."
             implementationClass = "flavor.pie.kludgec.KludgeGradlePlugin"
         }
     }
@@ -33,4 +36,10 @@ dependencies {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+pluginBundle {
+    website = "https://github.com/pie-flavor/KludgeGradle/"
+    vcsUrl = "https://github.com/pie-flavor/KludgeGradle"
+    tags = listOf("kludge", "sponge", "kotlin", "minecraft", "plugin")
 }
